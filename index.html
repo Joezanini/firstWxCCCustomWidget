@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        /*:root {
+            --element-bg-color: lightblue;
+            --line-color: blue;
+        }*/
+
+        .dark {
+            --element-bg-color: rgb(107, 5, 166);
+            --line-color: rgb(75, 75, 82);
+            background-color: rgb(27, 27, 39);
+            color: lightgray;
+        }
+        body {
+            padding: 10px;
+        }
+
+        :not(:defined){
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <app-input label="Username"></app-input>
+    <app-form></app-form>
+
+    <script>
+        document.addEventListener("input", (event) => {
+            console.log("input event: ", event.target.tagName);
+        })
+
+        document.addEventListener("app-input", (event) => {
+            console.log("app input event: ", event.target.tagName, event.detail);
+        });
+    </script>
+    
+    <script src="src/button.js" type="module"></script>
+    <script src="src/counter.js" type="module"></script>
+    <script src="src/card.js" type="module"></script>
+    <script src="src/input.js" type="module"></script>
+    <script src="src/basic-form.js" type="module"></script>
+  </body>
+</body>
+</html>
