@@ -28,7 +28,6 @@
     </style>
 </head>
 <body>
-    <app-input label="Username"></app-input>
     <app-form></app-form>
 
     <script>
@@ -40,12 +39,8 @@
             console.log("app input event: ", event.target.tagName, event.detail);
         });
     </script>
-    
-    <script src="src/button.js" type="module"></script>
-    <script src="src/counter.js" type="module"></script>
-    <script src="src/card.js" type="module"></script>
-    <script src="src/input.js" type="module"></script>
-    <script src="src/basic-form.js" type="module"></script>
+
+    <script src="dist/bundle.js" type="module"></script>
   </body>
 </body>
 </html>
